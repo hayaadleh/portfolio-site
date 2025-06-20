@@ -6,34 +6,38 @@
   <title>Haya Adleh</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
 
   <!-- Toggle Nav -->
- <nav class="top-nav">
-  <ul>
-    <li><a href="index.html" class="btn-diagonal">Home</a></li>
-    <li><a href="projects.html" class="btn-diagonal">Projects</a></li>
-    <li><a href="about.html" class="btn-diagonal">About</a></li>
-  </ul>
-</nav>
+<header class="header">
+  <nav class="top-nav">
+    <ul>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
   <!-- Home Section -->
   <section id="home" class="home-screen">
     <h1 class="main-title">Haya Adleh</h1>
   </section>
 
-  <!-- Pacman Cursor -->
-  <div id="pacman-cursor"></div>
+<section class="home">
+  <div class="intro">
+    <p class="summary">
+      Driving equitable solutions through data, design, and community-centered innovation.<br /><br />
+      I am an economist focused on urban studies, passionate about leveraging rigorous analysis and human-centered design to address social inequalities and improve public services. Explore my projects to see how I translate insights into tangible impact.
+    </p>
+  </div>
+  <div class="profile-pic-container">
+    <img src="images/IMG_2750.jpg" alt="Haya Adleh" class="profile-pic" />
+  </div>
+</section>
 
-  <script>
-    const pacman = document.getElementById('pacman-cursor');
-    document.body.style.cursor = 'none';
-
-    document.addEventListener('mousemove', (e) => {
-      pacman.style.left = e.pageX + 'px';
-      pacman.style.top = e.pageY + 'px';
-    });
   </script>
 </body>
 </html>
