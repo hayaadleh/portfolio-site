@@ -24,34 +24,86 @@ a:hover {
   color: #ffffff;
 }
 
-/* Navigation Bar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #1a1a1a;
-  padding: 1rem 2rem;
-  border: 1px solid #2f2f2f;
+/* Container */
+.top-nav {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111;
   border-radius: 12px;
+  padding: 0.3rem 1rem;
+  display: flex;
+  gap: 1rem;
+  z-index: 1000;
+  box-shadow:
+    0 4px 0 #0f7a90,   /* bottom edge */
+    inset 0 0 15px #0ff8ffaa;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #7df9ff;
-  letter-spacing: 2px;
-}
-
-.nav-links {
+/* Nav list reset */
+.top-nav ul {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-links li a {
+/* Nav links as 3D pixel buttons */
+.top-nav li a {
+  position: relative;
+  display: block;
+  padding: 0.8rem 1.6rem;
+  background: linear-gradient(145deg, #0a3945, #104958);
+  color: #7df9ff;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: 1rem;
   text-transform: uppercase;
-  font-weight: 600;
-  font-size: 0.9rem;
+  text-shadow:
+    1px 1px 0 #03181e,
+    -1px -1px 0 #1c535f;
+  border-radius: 6px;
+  box-shadow:
+    3px 3px 0 #033743,
+    inset 0 0 8px #00ffffcc;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+/* Scanline animation container */
+.top-nav li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  transition: left 0.6s ease;
+  pointer-events: none;
+  filter: drop-shadow(0 0 4px #7df9ff);
+}
+
+/* On hover: scanline slides across */
+.top-nav li a:hover::before {
+  left: 150%;
+}
+
+/* On hover: brighten text */
+.top-nav li a:hover {
+  color: #b3ffff;
+  text-shadow:
+    2px 2px 6px #7df9ff,
+    -2px -2px 6px #7df9ff;
 }
 
 /* Sections */
