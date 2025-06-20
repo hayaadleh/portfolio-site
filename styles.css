@@ -50,33 +50,34 @@ a:hover {
   padding: 0;
 }
 
-/* Nav links with static diagonal rainbow overlay on hover */
 .top-nav li a {
   position: relative;
   display: block;
-  padding: 0.8rem 1.8rem;
-background: repeating-linear-gradient(
-  45deg,
-  #ff0080 0,
-  #ff8c00 15%,
-  #40e0d0 30%,
-  #ff0080 45%
-);  
-  color: #fff;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 600;
-  font-size: 1.1rem;
+  padding: 0.5rem 1rem;  /* smaller padding */
+  background: repeating-linear-gradient(
+    45deg,
+    #ff0080 0,
+    #ff8c00 15%,
+    #40e0d0 30%,
+    #ff0080 45%
+  );
+  color: #7df9ff;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: 0.85rem;    /* smaller font size */
   text-transform: uppercase;
-  border-radius: 12px;
-  box-shadow: 0 3px 6px rgba(217, 158, 220, 0.7);
+  text-shadow:
+    1px 1px 0 #03181e,
+    -1px -1px 0 #1c535f;
+  border-radius: 6px;
+  box-shadow:
+    3px 3px 0 #033743,
+    inset 0 0 8px #00ffffcc;
   cursor: pointer;
-  user-select: none;
-  text-align: center;
   overflow: hidden;
-  transition: background-color 0.3s ease, transform 0.25s ease;
+  transition: color 0.3s ease;
 }
 
-/* On hover: brighten text */
 .top-nav li a:hover {
   color: #b3ffff;
   text-shadow:
