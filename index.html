@@ -2,70 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Haya Adleh | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Haya Adleh</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">Haya Adleh</div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#about">About Me</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <section id="home" class="home">
-      <img src="images/profile.jpg" alt="Photo of Haya" class="profile-pic" />
-      <div class="intro">
-        <h1>Hi, I'm Haya</h1>
-        <p>Economist, civic researcher, and writer interested in the intersections of urban development, equity, and heritage.</p>
-      </div>
-    </section>
+  <!-- Toggle Nav -->
+  <nav class="top-nav">
+    <ul>
+      <li><a href="index.html">home</a></li>
+      <li><a href="projects.html">projects</a></li>
+      <li><a href="about.html">about</a></li>
+    </ul>
+  </nav>
 
-    <section id="projects" class="projects">
-      <h2>Projects</h2>
-      <div class="project-grid">
-        <a href="critical-fields.html" class="project-icon">Critical Fields</a>
-        <a href="portland-homelessness.html" class="project-icon">Portland Homelessness</a>
-        <a href="urban-refuge.html" class="project-icon">Urban Refuge</a>
-        <a href="green-bike-tour.html" class="project-icon">Green Building Bike Tour</a>
-        <a href="tfp-nicaragua.html" class="project-icon">TFP in Nicaragua</a>
-      </div>
-    </section>
+  <!-- Home Section -->
+  <section id="home" class="home-screen">
+    <h1 class="main-title">Haya Adleh</h1>
+  </section>
 
-    <section id="about" class="about">
-      <h2>About Me</h2>
-      <p>I’m a recent graduate with a BA/MA in Economics from Boston University. I work at the intersection of data, urban design, and social justice.</p>
-      <h3>Currently reading/writing about:</h3>
-      <ul>
-        <li>Anti-colonial urban futures</li>
-        <li>Reconstruction and sovereignty in Syria</li>
-        <li>Decentralized economies and solidarity networks</li>
-      </ul>
-      <h3><a href="Haya-Adleh-CV.pdf" target="_blank">View my CV →</a></h3>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 Haya Adleh | All rights reserved</p>
-  </footer>
-
+  <!-- Pacman Cursor -->
   <div id="pacman-cursor"></div>
 
-<script>
-  const pacman = document.getElementById('pacman-cursor');
-  document.body.style.cursor = 'none';
+  <script>
+    const pacman = document.getElementById('pacman-cursor');
+    document.body.style.cursor = 'none';
 
-  document.addEventListener('mousemove', (e) => {
-    pacman.style.left = e.pageX + 'px';
-    pacman.style.top = e.pageY + 'px';
-  });
-</script>
+    document.addEventListener('mousemove', (e) => {
+      pacman.style.left = e.pageX + 'px';
+      pacman.style.top = e.pageY + 'px';
+    });
+  </script>
 </body>
 </html>
